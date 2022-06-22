@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="description" content="Put on headphones">
+	<title>eLuvLetter</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/letter.css" />
+	<link rel="stylesheet" href="css/sakura.css" />
+	<link rel="stylesheet" href="css/typed.css" />
+	<link rel="stylesheet" href="css/bgm.css" />
+
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="js/sakura.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/typed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bgm.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- jscex -->
+	<script type="text/javascript" src="js/jscex.min.js"></script>
+	<script type="text/javascript" src="js/jscex-parser.js"></script>
+	<script type="text/javascript" src="js/jscex-jit.js"></script>
+	<script type="text/javascript" src="js/jscex-builderbase.min.js"></script>
+	<script type="text/javascript" src="js/jscex-async.min.js"></script>
+	<script type="text/javascript" src="js/jscex-async-powerpack.min.js"></script>
+	<!-- functions -->
+	<script type="text/javascript" src="js/functions.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="jsi-cherry-container">
+		<div class="heart"></div>
+	</div>
+
+	<div id="envelope">
+		<section class="container" id="contact">
+			<form class="flip">
+				<div class="front">
+					<a id="stamp" href="#"><img></a>
+					<span id="recipient"></span>
+				</div>
+				<div id="content" class="back">
+					<div id="letter">
+						<div class="container">
+							<div class="flip">
+								<div class="front"></div>
+								<div class="back">
+									<div id="data">
+										<p class="letter"></p>
+									</div>
+									<a id="close" href="#"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="top">
+						<a id="wax-half" href="#"></a>
+						<a id="flip" href="#contact">♥</a>
+					</div>
+					<div id="lid" class="container">
+						<div class="flip">
+							<div class="front">
+								<a id="open" href="#content"><span id="wax"></span></a>
+							</div>
+							<div class="back"></div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</section>
+		<div id="footer">
+			<audio id="music" preload="auto" loop></audio>
+			<a id="music_btn" class="play" href="javascript:playPause();"></a>
+		</div>
+	</div>
+
+
+	<!-- 倒计时 -->
+	<div id="clock-box">
+			Beautiful Tongtong and handsome Lele have been together
+	  <div id="clock"></div>
+  </div>
+</body>
+<script src="js/letter.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+<style>
+#clock-box {position:relative;margin-top: 50px; font-size:28px; color:#9C4849; text-align: center;}
+</style>
+<script>
+	var textAnimate = eval(Jscex.compile("async", function () {
+		    var together = new Date();
+		    together.setFullYear(2022,5 , 3); 			//时间年月日
+		    together.setHours(17);						//小时	
+		    together.setMinutes(0);					//分钟
+		    together.setSeconds(0);					//秒前一位
+		    together.setMilliseconds(2);				//秒第二位
+
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+		textAnimate().start();
+</script>
+</html>
