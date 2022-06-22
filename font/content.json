@@ -5,6 +5,6 @@
     "sender": "handsome Lele",
     "title": "一封电子信",
     "stamp": "./img/stamp.png",
-    "bgm": "https://myblog-1257298572.cos.ap-shanghai.myqcloud.com/wxhnyqqhbys.mp3",
+    "bgm": "./bgm/wxhnyqqhb.mp3",
     "text": "&nbsp;&nbsp;&nbsp;&nbsp;蓝的天，白的云，<br>&nbsp;&nbsp;&nbsp;&nbsp;有微风拂你的脸庞。<br>&nbsp;&nbsp;&nbsp;&nbsp;海风吹的味道，<br>&nbsp;&nbsp;&nbsp;&nbsp;就像夏天的拥抱。<br>&nbsp;&nbsp;&nbsp;&nbsp;不知道怎么会想起你，<br>&nbsp;&nbsp;&nbsp;&nbsp;悄悄心跳不已。<br>&nbsp;&nbsp;&nbsp;&nbsp;你轻轻哼起，这曲旋律，<br>&nbsp;&nbsp;&nbsp;&nbsp;写满了思绪。<br>&nbsp;&nbsp;&nbsp;&nbsp;不管在哪里，有我陪着你~"
 }
